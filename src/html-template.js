@@ -13,20 +13,25 @@ class MakeFile {
             let thisId = this.data[i].id;
             let thisEmail = this.data[i].email;
             let thisRole = this.data[i].role;
-            let thisRest = ''
+            let thisRest = '';
+            let thisIcon = '';
             if (this.data[i].github) {
                 thisRest = `<a href="https://github.com/${this.data[i].github}?tab=repositories" target="_blank">Github: ${this.data[i].github}</a>`;
+                thisIcon = `<span class="oi oi-beaker"></span>`
             } else if (this.data[i].school) {
                 thisRest = `School: ${this.data[i].school}`;
+                thisIcon = `<span class="oi oi-headphones"></span>`
             } else if (this.data[i].officeNum) {
                 thisRest = `Office Number: ${this.data[i].officeNum}`;
+                thisIcon = `<span class="oi oi-briefcase"></span>`
+                
             }
 
-            madeCard.push(`<div class="card" style="width: 15rem; min-height: 100px;">
-            <div class="card-body" style="background-color: cornflowerblue; border-radius: 1%;">
+            madeCard.push(`<div class="card" style="width: 15rem; min-height: 100px; margin: 7px;">
+            <div class="card-body p-0" style="background-color: cornflowerblue; border-radius: 1%;">
               <div class="text-white">
                   <h5 class="card-title text-center">${thisName}</h5>
-                  <h6 class="card-subtitle text-center mb-2">${thisRole}</h6>
+                  <h6 class="card-subtitle text-center mb-2">${thisIcon} ${thisRole}</h6>
               </div>
               <ul class="list-group list-group-flush text-center">
                 <li class="list-group-item">ID: ${thisId}</li>
@@ -48,6 +53,7 @@ return `<!DOCTYPE html>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
         <link rel="stylesheet" href="./style.css">
         <title>My Workforce</title>
     </head>
@@ -56,7 +62,7 @@ return `<!DOCTYPE html>
             <h1>My Team</h1>
         </header>
         <main class="d-flex align-items-center justify-content-center" style="height: 600px;">
-            <div class="d-flex align-items-center justify-content-center flex-wrap w-50">
+            <div class="d-flex align-items-center justify-content-center flex-wrap w-75">
             ${this.employeeCards()}
             </div>
         </main>   
