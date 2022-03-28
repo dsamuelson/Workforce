@@ -1,11 +1,11 @@
 const Construction = require('../utils/constructHTML');
 const fs = require('fs');
-
+// makes a class that contains the methods needed to dynamically generate the html page
 class MakeFile {
     constructor(data) {
         this.data = data;
     }
-
+    // dynamically creates cards that are added into the document based on responses
     employeeCards() {
         const madeCard = []
         for ( let i = 0 ; i < this.data.length ; i++ ) {
@@ -39,7 +39,7 @@ class MakeFile {
 
       return madeCard.join('\r\n');
     }
-
+    // returns the full html page with any dynamic values inserted
     fullHTML() {
 return `<!DOCTYPE html>
 <html lang="en">

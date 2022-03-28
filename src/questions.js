@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 
+// sets up questions for each group as well as shared questions
+// manager unique questions
 const managerQuestions = [
     {
         type: 'input',
@@ -55,7 +57,7 @@ const managerQuestions = [
         }
     }
 ];
-
+// questions that will be asked no matter the role
 const allRoleQuestions = [
     {
         type: 'input',
@@ -98,7 +100,7 @@ const allRoleQuestions = [
 
     }
 ];
-
+// questions that are specific to the engineers
 const engineerQuestions = [
     {
         type: 'input',
@@ -114,7 +116,7 @@ const engineerQuestions = [
         }
     }
 ];
-
+// questions that are specific to the interns
 const internQuestions = [
     {
         type: 'input',
@@ -130,7 +132,7 @@ const internQuestions = [
         }
     }
 ];
-
+// export all the question arrays to be used in constructing the page
 module.exports = {
     managerQuestions,
     allRoleQuestions,

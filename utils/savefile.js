@@ -14,6 +14,7 @@ const saveFile = fileContent => {
                 message: 'html created! Please see the /dist folder to see the file.'
             });
         });
+        // write a CSS file just for the media query
         fs.writeFile('./dist/style.css', '@media screen and (max-width: 900px) {main {height: 820px!important;}}', err => {
             if (err) {
                 reject(err);
