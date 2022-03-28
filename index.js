@@ -1,4 +1,4 @@
-const Construction = require('./src/constructHTML');
+const Construction = require('./utils/constructHTML');
 
 new Construction().initialize();
 
