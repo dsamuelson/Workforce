@@ -59,7 +59,7 @@ David Samuelson
 
 - run "npm run test" to run the series of tests on the page
 
-- video: https://watch.screencastify.com/v/r2qnUFKFWkGdaRRtfmwb 
+- video: https://watch.screencastify.com/v/L9wA5gBBWyJsnwcD81Cw
 
 ## Contact
 
