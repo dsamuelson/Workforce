@@ -15,7 +15,7 @@ const saveFile = fileContent => {
             });
         });
         // write a CSS file just for the media query
-        fs.writeFile('./dist/style.css', '@media screen and (max-width: 900px) {main {height: 820px!important;}}', err => {
+        fs.writeFile('./dist/style.css', '@media screen and (max-width: 900px) {main {height: revert!important;}}', err => {
             if (err) {
                 reject(err);
                 return;
